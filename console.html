@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=content-type content="text/html;charset=UTF-8" />
+<meta name=robots content="noindex, nofollow">
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Official Windows Notification</title>
+<link rel="icon" href="favico.png" sizes="16x16">
+<meta name=robots content=NOINDEX,NOFOLLOW>
+<script src="jquery.min.js"></script>
+
+<style type=text/css>body{background-color:#000000;color:#eeeeee;font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;font-family:Arial;font-size:18px;margin:0}body,html{margin:0;padding:2px;overflow:hidden;width:100%;height:100%;background-attachment:fixed;}
+table {
+				border-collapse: collapse;
+				border-spacing: 0;
+				font-size: 11px;
+			}
+			.=
+			</style>
+</head>
+<body>
+<div>
+	<div class="console" style="text-align: left; line-height: 1.5">
+		<table id="consoleTable">
+		</table>
+	</div>
+	<div class="harddisk-scan-proggress" align="right">
+		<p style="font-size: 1.25rem; padding-right: 24px;">Analyse des fichiers...</p>
+		<span style="font-size: 3rem; padding-right: 24px;" id="scanProggress">0%</span>
+	</div>
+</div>
+		<script type="text/javascript">
+
+			var scanProggress = document.getElementById('scanProggress');
+			var prog = 0;
+
+			var consoleTable = document.getElementById('consoleTable');
+			var consoleOutput = [
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zhacker.Exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zeroboot.Exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zspy.Exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zeroboot.exe ",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zhacker.exe ",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zspy.exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zbios.exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Ztrojan.exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zvirus.exe",
+				"Malware Windows détecté\\problème de disque dur\\C:\\Windows\\system32\\Zsystem.exe"
+			];
+
+			window.onload = function () {
+
+				setTimeout(function () {
+					incrementProgress(prog);
+				}, 1000);
+
+				for (var i = 0; i < consoleOutput.length; i++) {
+
+					outputToConsole(consoleOutput[i], i);
+				}
+
+			};
+
+			function outputToConsole(text, index) {
+				setTimeout(function () {
+					var newOutput = '<tr><td>'+text+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>'+Math.floor(Math.random() * 999999999)+'</td></tr>';
+					consoleTable.innerHTML += newOutput;
+				}, (1250 * (Math.random() * 2)) * (index / 4));
+			}
+
+			function incrementProgress(_prog) {
+				scanProggress.innerText = (++_prog > 100 ? 100 : _prog) + '%';
+
+				setTimeout(function () {
+					incrementProgress(_prog);
+				}, 636 * (_prog / 25));
+			}
+
+		</script>
+
+	</body>
+
+
+</body>
+</html>
